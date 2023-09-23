@@ -1,6 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
+/**
+ * This class is the main window of the game.
+ * It contains all the components needed to display a game window.
+ *
+ * @extends  {<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a>}
+ */
 public class DisplayWindow extends JFrame {
 
     JPanel playerOneArea = new JPanel();JPanel boardArea = new JPanel();JPanel playerTwoArea = new JPanel();
@@ -9,8 +16,15 @@ public class DisplayWindow extends JFrame {
 
     JPanel winArea = new JPanel();
     int counter = 0;
+    int playerOneScore = 0;JTextArea playerOneData = new JTextArea("Player One\n\nScore: " + playerOneScore);
+    int playerTwoScore = 0;JTextArea playerTwoData = new JTextArea("Player Two\n\nScore: " + playerTwoScore);
 
+    /**
+     * This method is the constructor of the DisplayWindow class
+     * @param title the title of the window
+     */
     public DisplayWindow(String title){
+        setIconImage(new ImageIcon(getClass().getResource("/images/icon.png")).getImage());
         setSize(1000, 600);
         setTitle(title);
         setLayout(new BorderLayout());
@@ -20,10 +34,10 @@ public class DisplayWindow extends JFrame {
         add(playerOneArea, BorderLayout.WEST);add(boardArea, BorderLayout.CENTER);add(playerTwoArea, BorderLayout.EAST);
 
         playerOneArea.setFont(new Font("Arial", Font.ITALIC, 80));
-        playerOneArea.add(new JLabel("Player One"));
+        playerOneData.setEditable(false);playerOneData.setFont(new Font("Arial", Font.PLAIN, 25));playerOneData.setBackground(null);playerOneArea.add(playerOneData);
         playerOneArea.setBackground(Color.green);
         playerOneArea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        playerTwoArea.add(new JLabel("Player Two"));
+        playerTwoData.setEditable(false);playerTwoData.setFont(new Font("Arial", Font.PLAIN, 25));playerTwoData.setBackground(null);playerTwoArea.add(playerTwoData);
         playerTwoArea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 
@@ -34,7 +48,7 @@ public class DisplayWindow extends JFrame {
                 matrix[i][j].setFont(new Font("Arial", Font.BOLD, 80));
                 int finalI = i;
                 int finalJ = j;
-                matrix[i][j].addActionListener(e -> {updateBoard(finalI, finalJ);});
+                matrix[i][j].addActionListener(e -> updateBoard(finalI, finalJ));
                 boardArea.add(matrix[i][j]);
             }
         }
@@ -43,6 +57,14 @@ public class DisplayWindow extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Method that processes the gameplay of the game.
+     * Displays button text based on which player pressed it.
+     * Determines if either player has won the game, if not, changes the player
+     *
+     * @param row the row of the button that was pressed
+     * @param col the column of the button that was pressed
+     */
     public void updateBoard(int row, int col){
         counter++;
         matrix[row][col].setText(player);
@@ -62,32 +84,43 @@ public class DisplayWindow extends JFrame {
         if(diagonalOne || diagonalTwo) winScreen();
         if(counter == 9){restart();}
 
-        switch (player){
-            case "O":
+        switch (player) {
+            case "O" -> {
                 player = "X";
                 playerOneArea.setBackground(Color.gray);
                 playerTwoArea.setBackground(Color.green);
-                break;
-            case "X":
+            }
+            case "X" -> {
                 player = "O";
                 playerOneArea.setBackground(Color.green);
                 playerTwoArea.setBackground(Color.gray);
-                break;
+            }
         }
     }
 
-
+    /**
+     * This method is used to display the win screen.
+     */
     public void winScreen(){
+        switch (player) {case "O" -> playerOneScore++;case "X" -> playerTwoScore++;}
+        playerOneData.setText("Player One\n\nScore: " + playerOneScore);
+        playerTwoData.setText("Player Two\n\nScore: " + playerTwoScore);
+
         this.remove(boardArea);
         winArea.removeAll();
         winArea.add(new JLabel("Player " + (player.equals("O")? "One" : "Two") + " is the winner")).setFont(new Font("Times New Roman", Font.BOLD, 50));
+
         JButton restartButton = new JButton("Restart Game");
         restartButton.addActionListener(e -> restart());
         winArea.add(restartButton);
+
         this.add(winArea, BorderLayout.CENTER);
         this.setSize(1000, 601);this.setSize(1000, 600);
     }
 
+    /**
+     * This method is used to restart the game when a player has won the game or a tie occurs.
+     */
     public void restart() {
         this.remove(winArea);
         boardArea.removeAll();
@@ -100,7 +133,7 @@ public class DisplayWindow extends JFrame {
                 matrix[i][j].setFont(new Font("Arial", Font.BOLD, 80));
                 int finalI = i;
                 int finalJ = j;
-                matrix[i][j].addActionListener(e -> {updateBoard(finalI, finalJ);});
+                matrix[i][j].addActionListener(e -> updateBoard(finalI, finalJ));
                 boardArea.add(matrix[i][j]);
             }
         }
