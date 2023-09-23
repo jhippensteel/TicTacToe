@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5476bd4c-3655-4bf3-a38f-004b52db93f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DisplayWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticTacToe.iml" afterDir="false" />
+    <list default="true" id="5476bd4c-3655-4bf3-a38f-004b52db93f1" name="Changes" comment="Fist Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +47,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="TicTacToe" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TicTacToe" />
+      <module name="ticTacToe" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,11 +76,24 @@
       <workItem from="1695440277609" duration="1507000" />
       <workItem from="1695441820651" duration="1470000" />
       <workItem from="1695443346347" duration="225000" />
-      <workItem from="1695443611561" duration="5704000" />
+      <workItem from="1695443611561" duration="10741000" />
     </task>
+    <task id="LOCAL-00001" summary="Fist Commit">
+      <option name="closed" value="true" />
+      <created>1695449571210</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695449571210</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fist Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fist Commit" />
   </component>
 </project>
