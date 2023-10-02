@@ -54,6 +54,7 @@ public class DisplayWindow extends JFrame {
         }
 
 
+
         setVisible(true);
     }
 
@@ -96,6 +97,7 @@ public class DisplayWindow extends JFrame {
                 playerTwoArea.setBackground(Color.gray);
             }
         }
+        String[][] randomMatrix = Computationals.interpretBoard(matrix);
     }
 
     /**
@@ -135,8 +137,10 @@ public class DisplayWindow extends JFrame {
                 int finalJ = j;
                 matrix[i][j].addActionListener(e -> updateBoard(finalI, finalJ));
                 boardArea.add(matrix[i][j]);
+
             }
         }
+
 
         this.setSize(1000, 601);this.setSize(1000, 600);
     }

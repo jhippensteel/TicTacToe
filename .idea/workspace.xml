@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5476bd4c-3655-4bf3-a38f-004b52db93f1" name="Changes" comment="Added replayability">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/icon.png" afterDir="false" />
+    <list default="true" id="5476bd4c-3655-4bf3-a38f-004b52db93f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Computationals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DisplayWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -38,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;AIPlayer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TicTacToe" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="TicTacToe" />
@@ -83,7 +85,18 @@
       <workItem from="1695440277609" duration="1507000" />
       <workItem from="1695441820651" duration="1470000" />
       <workItem from="1695443346347" duration="225000" />
-      <workItem from="1695443611561" duration="16992000" />
+      <workItem from="1695443611561" duration="17269000" />
+      <workItem from="1695665337205" duration="146000" />
+      <workItem from="1695837592285" duration="44000" />
+      <workItem from="1695837871780" duration="23000" />
+      <workItem from="1695841828100" duration="18000" />
+      <workItem from="1695842002814" duration="611000" />
+      <workItem from="1695868628467" duration="766000" />
+      <workItem from="1695870328032" duration="14000" />
+      <workItem from="1696010481599" duration="15000" />
+      <workItem from="1696268016892" duration="114000" />
+      <workItem from="1696269768001" duration="3132000" />
+      <workItem from="1696275920636" duration="5812000" />
     </task>
     <task id="LOCAL-00001" summary="Fist Commit">
       <option name="closed" value="true" />
@@ -101,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695491153465</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Win Counter and Window Icon">
+      <option name="closed" value="true" />
+      <created>1695497139730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695497139730</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +132,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fist Commit" />
     <MESSAGE value="Added replayability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added replayability" />
+    <MESSAGE value="Win Counter and Window Icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Win Counter and Window Icon" />
   </component>
 </project>
