@@ -97,7 +97,11 @@ public class DisplayWindow extends JFrame {
                 playerTwoArea.setBackground(Color.gray);
             }
         }
-        String[][] randomMatrix = Computationals.interpretBoard(matrix);
+        if(player.equals("X")) {
+            int[] bestCoord = Computationals.findBestMove(matrix, "X");
+            matrix[bestCoord[0]][bestCoord[1]].doClick();
+            player = "O";
+        }
     }
 
     /**

@@ -8,7 +8,6 @@ public class Computationals {
                 result[i][j] = board[i][j].getText();
             }
         }
-        System.out.println(calculateScore(result));
         return result;
     }
 
@@ -29,10 +28,10 @@ public class Computationals {
         return false;
     }
 
-    private static int calculateScore(String[][] board){
+    private static int calculateScore(String[][] board, String letter){
         System.out.println("Hello");
-        if (hasWon("X", board)) {System.out.println("winner winner"); return 10;}
-        if (hasWon("O", board)) {System.out.println("loser loser");return -10;}
+        if (hasWon(letter, board)) {System.out.println("winner winner"); return 10;}
+        //if (hasWon("O", board)) {System.out.println("loser loser");return -10;}
         boolean tie = true;
         for (String[] row : board) {
             for (String x :row){
@@ -46,13 +45,31 @@ public class Computationals {
             for (int col=0; col<board[row].length; col++) {
                 boardCopy = board;
                 if(board[row][col].isBlank()){
-                    boardCopy[row][col] = "X";
-                    score += calculateScore(boardCopy);
+                    boardCopy[row][col] = letter;
+                    if(letter.equals("X")){score += calculateScore(boardCopy, "X") - calculateScore(boardCopy, "O");}
+                    if(letter.equals("O")){score += calculateScore(boardCopy, "O") - calculateScore(boardCopy, "X");}
                 }
             }
         }
         System.out.println("Score: " + score);
         return score;
     }
-    //TODO: Add "O" player
+    public static int[] findBestMove(JButton[][] board, String playa){
+        String[][] boardClone = interpretBoard(board); String[][] boardCopy = boardClone;
+        int[] coord = new int[2]; int score=Integer.MIN_VALUE;int scoreCopy;
+        for(int row=0; row<boardClone.length; row++) {
+            for(int col=0;col<boardClone[0].length; col++) {
+                if(boardClone[row][col].isBlank()){
+                    boardCopy = boardClone;
+                    boardCopy[row][col] = playa;
+                    scoreCopy = calculateScore(boardCopy, playa);
+                    if(scoreCopy > score){
+                        coord[0] = row;coord[1] = col;
+                        score = scoreCopy;
+                    }
+                }
+            }
+        }
+        return coord;
+    }
 }
