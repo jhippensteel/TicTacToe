@@ -98,6 +98,7 @@ public class DisplayWindow extends JFrame {
             }
         }
         if(player.equals("X")) {
+            System.out.println("\n\n_________________________________\n\n");
             int[] bestCoord = Computationals.findBestMove(matrix, "X");
             matrix[bestCoord[0]][bestCoord[1]].doClick();
             player = "O";
