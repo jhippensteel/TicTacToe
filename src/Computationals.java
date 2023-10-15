@@ -43,9 +43,9 @@ public class Computationals {
 
         if (hasWon(letter, board)) {for (String[] l1 : board){System.out.println();for (String l2 : l1){if(l2.isBlank()){System.out.print("b");}System.out.print(l2 + " ");}}System.out.println("\n///////");return 10;}
 
-        if (letter.equals("X") && hasWon("O", board)) {System.out.println("\n O wins/////// at " + depth);printBoardState(board);if(depth < 2)return -1000;return -10;}
+        if (letter.equals("X") && hasWon("O", board)) {/*System.out.println("\n O wins/////// at " + depth);printBoardState(board);*/if(depth < 2)return -1000+depth*5;return -10;}
 
-        else if(letter.equals("O") && hasWon("X", board)){System.out.println("\n X wins/////// at " + depth);printBoardState(board);if(depth < 2)return -1000;return -10;}
+        else if(letter.equals("O") && hasWon("X", board)){/*System.out.println("\n X wins/////// at " + depth);printBoardState(board);*/if(depth < 2)return -1000+depth*5;return -10;}
 
         boolean tie = true;
         for (String[] row : board) {
@@ -61,14 +61,14 @@ public class Computationals {
                 boardCopy = deepCopy(board);
                 if(board[row][col].isBlank()){
                     boardCopy[row][col] = letter;
-                    System.out.println(letter + ": [" + row + "] [" + col + "] : " + depth);
+                    //System.out.println(letter + ": [" + row + "] [" + col + "] : " + depth);
                     if(letter.equals("X")){score -= calculateScore(boardCopy, "O", depth+1);}
                     if(letter.equals("O")){score -= calculateScore(boardCopy, "X", depth+1);}
                 }
             }
         }
         node++;
-        return score;
+        return score + depth*100;
     }
     public static int[] findBestMove(JButton[][] board, String playa){
         System.out.println("New best move");
