@@ -99,7 +99,10 @@ public class DisplayWindow extends JFrame {
         }
         if(player.equals("X")) {
             System.out.println("\n\n_________________________________\n\n");
+            long memory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
             int[] bestCoord = Computationals.findBestMove(matrix, "X");
+            long afterMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+            System.out.println("Used memory: " + (afterMemory-memory)/1e+6+" MB");
             matrix[bestCoord[0]][bestCoord[1]].doClick();
             player = "O";
         }
